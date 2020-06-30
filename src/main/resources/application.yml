@@ -31,5 +31,10 @@ spring:
   #    - classpath:sql/employee.sql
   # springboot 2.1.5 and later version requires
     initialization-mode: always
+
 server:
   port: 8899
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

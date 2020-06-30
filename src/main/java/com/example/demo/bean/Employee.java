@@ -1,11 +1,14 @@
 package com.example.demo.bean;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("mEmp")
 public class Employee {
     private Integer id;
-    private String name;
+    private String lastName;
     private String email;
     private Integer gender;
-    private Integer did;
+    private Integer dId;
 
     public Integer getId() {
         return id;
@@ -13,14 +16,6 @@ public class Employee {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
@@ -39,11 +34,19 @@ public class Employee {
         this.gender = gender;
     }
 
-    public Integer getDid() {
-        return did;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDid(Integer did) {
-        this.did = did;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Integer getdId() {
+        return dId;
+    }
+
+    public void setdId(Integer dId) {
+        this.dId = dId;
     }
 }

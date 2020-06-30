@@ -1,5 +1,7 @@
 package com.example.demo.bean;
 
+import org.apache.ibatis.type.Alias;
+
 public class Department {
     private Integer id;
     private String departmentName;
