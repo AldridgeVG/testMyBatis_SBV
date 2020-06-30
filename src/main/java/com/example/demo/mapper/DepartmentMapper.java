@@ -13,7 +13,9 @@ public interface DepartmentMapper {
     public int deleteDeptById(Integer deptId);
 
     //in department, id is configured as auto-increment
+    //use option "useGeneratedKeys" to show the id which in auto-increasingly generated
     //here the dN in #{} means department.departmentName (get the field from the param obj)
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     @Insert("insert into department(departmentName) values(#{departmentName})")
     public int insertDept(Department department);
 
