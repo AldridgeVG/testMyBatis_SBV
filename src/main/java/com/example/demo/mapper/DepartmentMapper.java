@@ -1,10 +1,7 @@
 package com.example.demo.mapper;
 
 import com.example.demo.bean.Department;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface DepartmentMapper {
@@ -19,4 +16,8 @@ public interface DepartmentMapper {
     //here the dN in #{} means department.departmentName (get the field from the param obj)
     @Insert("insert into department(departmentName) values(#{departmentName})")
     public int insertDept(Department department);
+
+    //here the dN and id in #{} means department.departmentName and department.id (get the field from the param obj)
+    @Update("update department set departname=#{departmentName} where id=#{id}")
+    public int updateDept(Department department);
 }

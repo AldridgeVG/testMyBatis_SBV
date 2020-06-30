@@ -2,7 +2,7 @@ package com.example.demo.bean;
 
 public class Department {
     private Integer id;
-    private String deptname;
+    private String departmentName;
 
     public Integer getId() {
         return id;
@@ -12,11 +12,11 @@ public class Department {
         this.id = id;
     }
 
-    public String getDeptname() {
-        return deptname;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setDeptname(String deptname) {
-        this.deptname = deptname;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 }
